@@ -1,0 +1,22 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root { --ink: 7 7 13; --panel: 15 15 26; --mist: 169 171 198; --fg: 236 238 251; --cyan: 34 211 238; --violet: 139 92 246; --onacc: 7 7 13; color-scheme: dark; }
+:root[data-theme="light"] { --ink: 246 245 255; --panel: 255 255 255; --mist: 74 77 112; --fg: 26 21 53; --cyan: 8 145 178; --violet: 124 58 237; --onacc: 255 255 255; color-scheme: light; }
+html { scroll-behavior: smooth; }
+:root[data-theme="light"] body { background: radial-gradient(60% 50% at 85% 8%, rgb(124 58 237 / .2), transparent 70%), radial-gradient(50% 45% at 6% 38%, rgb(8 145 178 / .17), transparent 70%), radial-gradient(45% 40% at 92% 85%, rgb(236 72 153 / .13), transparent 70%), #f6f5ff; background-attachment: fixed; }
+:root[data-theme="light"] header { box-shadow: 0 4px 24px rgb(76 29 149 / .08); }
+:root[data-theme="light"] .chip { box-shadow: 0 2px 10px rgb(76 29 149 / .09); border-color: rgb(124 58 237 / .2); }
+:root[data-theme="light"] .photo { box-shadow: 0 22px 50px rgb(124 58 237 / .3); }
+:root[data-theme="light"] .proj:hover { background: rgb(255 255 255 / .75); box-shadow: 0 12px 32px rgb(76 29 149 / .1); }
+:root[data-theme="light"] .btn-main { box-shadow: 0 10px 26px rgb(124 58 237 / .38); }
+:root[data-theme="light"] .btn-ghost { background: rgb(255 255 255 / .6); }
+body { background: rgb(var(--ink)); color: rgb(var(--fg)); font-family: var(--font-body), system-ui, sans-serif; transition: background .35s, color .35s; }
+::selection { background: rgb(var(--violet)); color: #fff; }
+:focus-visible { outline: 2px solid rgb(var(--cyan)); outline-offset: 3px; }
+.grad { background: linear-gradient(90deg, rgb(var(--cyan)), rgb(var(--violet))); -webkit-background-clip: text; background-clip: text; color: transparent; }
+#cd, #cr { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 100; border-radius: 50%; opacity: 0; }
+#cd { width: 8px; height: 8px; margin: -4px 0 0 -4px; background: rgb(var(--cyan)); }
+#cr { width: 38px; height: 38px; margin: -19px 0 0 -19px; border: 1.5px solid rgb(var(--violet)); transition: width .25s, height .25s, margin .25s, background .25s, border-color .25s, opacity .3s; }
+#cr.big { width: 66px; height: 66px; margin: -33px 0 0 -33px; background: rgb(var(--cyan) / .12); border-color: rgb(var(--cyan)); }
+html.cc, html.cc a, html.cc button { cursor: none; }
+html.cc #cd, html.cc #cr { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
