@@ -19,7 +19,7 @@ export default function Page() {
             <div className="photo relative mx-auto aspect-[4/5] w-full max-w-[260px] overflow-hidden rounded-3xl bg-gradient-to-br from-violet/40 to-cyan/30 md:max-w-none">
               <span className="absolute inset-0 grid place-items-center font-display text-7xl font-bold text-fg/70">BA</span>
               {/* Put your photo at public/profile.jpg */}
-              <div role="img" aria-label="Bilal Ahmed" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/profile.jpg)" }} />
+              <div role="img" aria-label="Bilal Ahmed" className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/profile.png)" }} />
             </div>
           </Reveal>
           <Reveal delay={0.1}>
